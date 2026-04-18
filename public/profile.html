@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Избранное | On The Move</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./profile.css" />
+  </head>
+  <body class="profile-page">
+    <div class="profile-layout">
+      <header class="hero profile-header">
+        <nav class="nav container">
+          <a class="logo" href="/">
+            <img class="logo-mark" src="./images/logo.svg" alt="" width="28" height="28" />
+            <span>On the Move</span>
+          </a>
+          <ul class="menu">
+            <li><a href="/#about">О нас</a></li>
+            <li><a href="/#countries">Топ стран</a></li>
+            <li><a href="/">На главную</a></li>
+            <li class="nav-auth-group">
+              <div class="nav-user" id="nav-user-root">
+                <button
+                  id="auth-btn"
+                  type="button"
+                  class="nav-btn nav-btn--primary nav-btn--icon-only"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Меню профиля"
+                  title="Профиль"
+                >
+                  <svg
+                    class="lucide lucide-user-round"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="8" r="5" />
+                    <path d="M20 21a8 8 0 0 0-16 0" />
+                  </svg>
+                </button>
+                <div id="user-dropdown" class="nav-user__dropdown hidden" role="menu" aria-hidden="true">
+                  <a href="#favorites-content" class="nav-user__item" role="menuitem">
+                    <svg
+                      class="lucide nav-user__item-icon"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+                      />
+                    </svg>
+                    <span>Избранное</span>
+                  </a>
+                  <button type="button" id="logout-dropdown-btn" class="nav-user__item nav-user__item--button" role="menuitem">
+                    <svg
+                      class="lucide nav-user__item-icon"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M11 20H2" />
+                      <path
+                        d="M11 4.562v16.157a1 1 0 0 0 1.242.97L19 20V5.562a2 2 0 0 0-1.515-1.94l-4-1A2 2 0 0 0 11 4.561z"
+                      />
+                      <path d="M11 4H8a2 2 0 0 0-2 2v14" />
+                      <path d="M14 12h.01" />
+                      <path d="M22 20h-3" />
+                    </svg>
+                    <span>Выйти из профиля</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="profile-main">
+        <div class="profile-favorites-panel">
+          <div class="profile-section-head">
+            <h2>Избранные страны</h2>
+            <p class="profile-section-sub">Сохранённые направления — откройте гид или добавьте новые на главной.</p>
+          </div>
+          <div id="favorites-content" class="countries-grid profile-favorites-grid" tabindex="-1"></div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p>© 2026 On the move — вдохновляйся и путешествуй</p>
+      </footer>
+    </div>
+
+    <script src="./nav-user.js"></script>
+    <script src="./profile.js"></script>
+  </body>
+</html>

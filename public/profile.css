@@ -1,0 +1,110 @@
+.profile-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #2a3c55 0%, #23344a 100%);
+}
+
+.profile-layout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.profile-page .profile-header.hero {
+  min-height: 0;
+  background: rgba(58, 84, 116, 0.52);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #2e3a49;
+}
+
+.profile-main {
+  flex: 1;
+  padding: 2.25rem 0 3rem;
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+#favorites-content {
+  scroll-margin-top: 4.5rem;
+}
+
+.profile-favorites-panel {
+  background: linear-gradient(165deg, rgba(22, 34, 50, 0.72), rgba(15, 24, 38, 0.88));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+.profile-section-head {
+  text-align: center;
+  margin-bottom: 1.65rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-section-head h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.55rem, 3.2vw, 2.1rem);
+  font-weight: 600;
+  color: #f8fafc;
+  letter-spacing: 0.02em;
+}
+
+.profile-section-sub {
+  margin: 0.5rem 0 0;
+  font-size: 0.96rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-favorites-grid {
+  margin-top: 0.25rem;
+}
+
+.profile-message {
+  margin: 0;
+  padding: 2.75rem 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #cbd5e1;
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px dashed rgba(148, 163, 184, 0.28);
+  border-radius: 16px;
+}
+
+.profile-message a {
+  color: #7dd3fc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.profile-message a:hover {
+  text-decoration: underline;
+}
+
+.profile-message--warn {
+  border-style: solid;
+  border-color: rgba(251, 191, 36, 0.35);
+  color: #fde68a;
+}
+
+.profile-message--error {
+  border-color: rgba(248, 113, 113, 0.35);
+  color: #fecaca;
+}
+
+@media (max-width: 620px) {
+  .profile-favorites-panel {
+    padding: 1.15rem;
+    border-radius: 18px;
+  }
+}

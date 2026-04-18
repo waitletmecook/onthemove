@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Страна | On The Move</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./country.css" />
+  </head>
+  <body>
+    <div id="country-bg-layer" class="country-bg-layer" aria-hidden="true">
+      <div class="country-bg-slide is-visible" id="country-bg-slide-a"></div>
+      <div class="country-bg-slide" id="country-bg-slide-b"></div>
+    </div>
+    <main id="country-page" class="country-page">
+      <header class="country-hero">
+        <nav class="nav container">
+          <a class="logo" href="/">
+            <img class="logo-mark" src="./images/logo.svg" alt="" width="28" height="28" />
+            <span>On the Move</span>
+          </a>
+          <ul class="menu country-nav-menu">
+            <li><a href="/#about">О нас</a></li>
+            <li><a href="/#countries">Топ стран</a></li>
+            <li><a class="back-link" href="/">На главную</a></li>
+            <li class="nav-auth-group">
+              <div class="nav-user" id="nav-user-root">
+                <button
+                  id="auth-btn"
+                  type="button"
+                  class="nav-btn nav-btn--primary nav-btn--icon-only"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Войти"
+                  title="Войти"
+                >
+                  <svg
+                    class="lucide lucide-user-round"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="8" r="5" />
+                    <path d="M20 21a8 8 0 0 0-16 0" />
+                  </svg>
+                </button>
+                <div id="user-dropdown" class="nav-user__dropdown hidden" role="menu" aria-hidden="true">
+                  <a href="/profile.html" class="nav-user__item" role="menuitem">
+                    <svg
+                      class="lucide nav-user__item-icon"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+                      />
+                    </svg>
+                    <span>Избранное</span>
+                  </a>
+                  <button type="button" id="logout-dropdown-btn" class="nav-user__item nav-user__item--button" role="menuitem">
+                    <svg
+                      class="lucide nav-user__item-icon"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M11 20H2" />
+                      <path
+                        d="M11 4.562v16.157a1 1 0 0 0 1.242.97L19 20V5.562a2 2 0 0 0-1.515-1.94l-4-1A2 2 0 0 0 11 4.561z"
+                      />
+                      <path d="M11 4H8a2 2 0 0 0-2 2v14" />
+                      <path d="M14 12h.01" />
+                      <path d="M22 20h-3" />
+                    </svg>
+                    <span>Выйти из профиля</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="container section country-title-section">
+        <div class="country-title-row">
+          <h1 id="hero-title" class="country-title">Страна</h1>
+          <button
+            type="button"
+            id="country-favorite-star"
+            class="country-fav-star"
+            aria-label="Добавить в избранное"
+            aria-pressed="false"
+            title="В избранное"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="country-fav-star-svg">
+              <path
+                class="country-fav-star-path"
+                d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </button>
+        </div>
+        <h2>О стране</h2>
+        <p id="country-description"></p>
+      </section>
+
+      <section class="container section">
+        <h2>Что посмотреть</h2>
+        <div id="what-to-see" class="places-grid"></div>
+      </section>
+
+      <section class="container section">
+        <h2>Советы путешественникам</h2>
+        <ul id="tips-list" class="tips-list"></ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 On the move — вдохновляйся и путешествуй</p>
+    </footer>
+
+    <script src="./nav-user.js"></script>
+    <script src="./country.js"></script>
+  </body>
+</html>
