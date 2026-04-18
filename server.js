@@ -464,8 +464,8 @@ app.post("/api/countries", async (req, res) => {
   }
 });
 
-app.get("/country/:id", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "country.html"));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 initializeDatabase()
